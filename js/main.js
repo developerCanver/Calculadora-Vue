@@ -13,7 +13,10 @@ const  app = Vue.createApp({
             return this.n1 - this.n2;
         },
         divicion(){
-            return this.n1 / this.n2;
+            const res = this.n1 / this.n2;
+            return res === Infinity || res === -Infinity
+            ? "Errror - no Calculable"
+            : res;
         },
         multiplicacion(){
             return this.n1 * this.n2;
